@@ -18,6 +18,7 @@ import (
 const BASE_TOPIC string = "/mqtt-bench/benchmark"
 
 var Debug bool = false
+var mutex = &sync.Mutex{}
 
 // Stores results of subscribes
 var DefaultHandlerResults []*SubscribeResult
@@ -172,7 +173,9 @@ func PublishAllClient(clients []MQTT.Client, opts ExecOptions, param ...string) 
 					fmt.Printf("Publish : id=%d, count=%d, topic=%s\n", clientId, index, topic)
 				}
 				Publish(client, topic, opts.Qos, opts.Retain, message)
+				mutex.Lock()
 				totalCount++
+				mutex.Unlock()
 
 				if opts.IntervalTime > 0 {
 					time.Sleep(time.Duration(opts.IntervalTime) * time.Millisecond)
