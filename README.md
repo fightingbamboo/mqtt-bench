@@ -1,26 +1,25 @@
 # MQTT-Bench : MQTT Benchmark Tool
-This is the benchmark tool for MQTT Broker implemented by [golang](https://golang.org/).
-This can benchmark the throughput for publishing and subscribing.
+This is a benchmark tool for MQTT Broker implemented in [golang](https://golang.org/). It can benchmark the throughput for publishing and subscribing. Forked originally from [takanorig/mqtt-bench](https://github.com/takanorig/mqtt-bench) and modified for newer PAHO MQTT location on github [https://github.com/eclipse/paho.mqtt.golang/](https://github.com/eclipse/paho.mqtt.golang/). Translations still forthcoming
 
 Supported benchmark pattern is:
 * Parallel publish from clients
 * Parallel subscribe from clients with publishing
 
 ## Getting started
-### Installation
+### Installation and Build
 
-Use ```go get``` and ```go install```
+This client is designed to work with the standard Go tools, so installation is as easy as:
 
 ```
-$ go get github.com/takanorig/mqtt-bench
-$ go install github.com/takanorig/mqtt-bench
+go get github.com/talmai/mqtt-bench
 ```
 
-or 
+The client depends on Google's [websockets](https://godoc.org/golang.org/x/net/websocket) package, 
+also easily installed with the command:
 
-Download here
-
-https://github.com/takanorig/mqtt-bench/wiki/Download
+```
+go get golang.org/x/net/websocket
+```
 
 ### Publish
 * Precondition
