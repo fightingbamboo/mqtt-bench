@@ -14,11 +14,11 @@ This client is designed to work with the standard Go tools, so installation is a
 go get github.com/talmai/mqtt-bench
 ```
 
-The client depends on Google's [websockets](https://godoc.org/golang.org/x/net/websocket) package, 
+The client depends on Eclipse's [PAHO MQTT](https://github.com/eclipse/paho.mqtt.golang) package, 
 also easily installed with the command:
 
 ```
-go get golang.org/x/net/websocket
+go get github.com/eclipse/paho.mqtt.golang
 ```
 
 ### Publish
