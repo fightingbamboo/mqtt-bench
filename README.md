@@ -84,7 +84,3 @@ Usage of mqtt-bench
   -intervaltime=0                             : Interval time per message (ms)
   -x=false                                    : Debug mode
 ```
-
-## Note
-* Using Apollo
- * If you use [Apollo 1.7.x](http://activemq.apache.org/apollo/), the subscribed messages can't be output to console even if debug mode. If you want to output the subscribed messages, designate ```-support-unknown-received``` option.
